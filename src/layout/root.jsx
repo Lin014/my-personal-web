@@ -39,11 +39,11 @@ const RootLayout = () => {
                   flexGrow: 1,
                 }}
               >
-                <Avatar alt="Logo" src={logo} sx={{ width: 56, height: 56 }} />
+                <Avatar alt="Logo" src={logo} sx={{ width: { xs: 48, sm: 56 }, height: { xs: 48, sm: 56 } }} />
                 <Typography
                   variant="h5"
                   color="primary"
-                  sx={{ fontFamily: "Playpen Sans" }}
+                  sx={{ fontFamily: "Playpen Sans", fontSize: { xs: "16px", sm: "24px" } }}
                 >
                   Amelia Chang
                 </Typography>

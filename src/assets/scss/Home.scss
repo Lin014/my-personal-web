@@ -1,3 +1,5 @@
+@import 'animate.css';
+
 .nav-item-normal {
   text-decoration: none;
   color: black;
@@ -32,13 +34,41 @@
   width: 60%;
 }
 
+.w-md-100 {
+  @media(max-width: 1199px) {
+    width: 100%;
+  }
+}
+
 .home-about-me-ul {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 48px;
 
+  @media(max-width: 599px) {
+    flex-direction: column;
+  }
+
   li:not(:last-child) {
     margin-right: 24px;
+    @media(max-width: 599px) {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
   }
+}
+
+.home-about-me-link {
+  display: block;
+  padding: 16px;
+  border: 3px solid #ffecb3;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  color: black;
+  text-decoration: none;
+}
+
+.home-about-me-link:hover {
+  transform: translateY(-10px);
 }
