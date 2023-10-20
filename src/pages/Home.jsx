@@ -70,7 +70,7 @@ function App() {
               Introduction
             </Typography>
             <Typography variant="h5" color="white" sx={{ lineHeight: "2" }}>
-              Hello, I'm Amelia.
+              Hello, I am Amelia.
               我來自美食之都台南，自臺南高商畢業，現就讀於國立雲林科技大學—資訊管理系四年級。
               個性親切、富有責任心，具備換位思考能力且有天馬行空想像力的女孩。有團隊協作的經驗，享受和他人溝通的過程。
             </Typography>
@@ -130,7 +130,7 @@ function App() {
               sx={{ lineHeight: "2" }}
               className="w-50"
             >
-              Hello, I'm Amelia.
+              Hello, I am Amelia.
               我來自美食之都台南，自臺南高商畢業，現就讀於國立雲林科技大學—資訊管理系四年級。
               個性親切、富有責任心，具備換位思考能力且有天馬行空想像力的女孩。有團隊協作的經驗，享受和他人溝通的過程。
             </Typography>
