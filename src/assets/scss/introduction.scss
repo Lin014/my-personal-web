@@ -1,0 +1,13 @@
+.introduction-ul {
+  padding-left: 32px;
+  margin-bottom: 24px;
+
+  li {
+    list-style-type: disc;
+    color: #392e28;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+}

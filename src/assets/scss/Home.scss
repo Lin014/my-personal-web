@@ -2,21 +2,23 @@
 
 .nav-item-normal {
   text-decoration: none;
-  color: black;
+  color: #392e28;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.2s linear;
   border-bottom: 0.2rem solid rgba(#ffb300, 0);
 }
 
 .nav-item-normal:hover {
-  color: black;
+  color: #392e28;
   border-bottom: 0.2rem solid #ffb300;
   padding-bottom: 0.1rem;
 }
 
 .nav-item-active {
   text-decoration: none;
-  color: black;
+  font-weight: bold;
+  color: #392e28;
   border-bottom: 0.2rem solid #ffb300;
   padding-bottom: 0.1rem;
 }
@@ -48,6 +50,11 @@
 
   @media(max-width: 599px) {
     flex-direction: column;
+    margin-bottom: 36px;
+
+    li {
+      width: 100%;
+    }
   }
 
   li:not(:last-child) {
@@ -62,10 +69,10 @@
 .home-about-me-link {
   display: block;
   padding: 16px;
-  border: 3px solid #ffecb3;
+  border: 2px solid rgba(#392e28, 0.2);
   border-radius: 20px;
   transition: transform 0.3s;
-  color: black;
+  color: #392e28;
   text-decoration: none;
 }
 

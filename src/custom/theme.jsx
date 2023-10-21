@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { amber, green } from "@mui/material/colors";
+import { green, amber } from "@mui/material/colors";
 
 export const theme = createTheme({
   palette: {
@@ -13,6 +13,7 @@ export const theme = createTheme({
       light: green[600],
       dark: green[600],
     },
+    textDark: "#392e28"
   },
   typography: {
     lineHeight: "1.5",
@@ -21,5 +22,11 @@ export const theme = createTheme({
         "Noto Sans TC",
         "sans-serif"
     ].join(','),
-  }
+    h1: {
+      color: amber[600]
+    },
+    h3: {
+      color: amber[600]
+    }
+  },
 });
