@@ -218,7 +218,7 @@ const RootLayout = () => {
               >
                 <LocalPhoneIcon sx={{ color: "white", mr: 1 }} />
                 <Link
-                  href="tel:+4733378901"
+                  href="tel:0968001922"
                   sx={{ color: "white", fontSize: 20 }}
                 >
                   0968-001922
