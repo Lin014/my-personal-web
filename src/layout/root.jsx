@@ -13,12 +13,16 @@ import Stack from "@mui/material/Stack";
 import { Container } from "@mui/material";
 import { amber } from "@mui/material/colors";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Link from "@mui/material/Link";
 
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import EmailIcon from '@mui/icons-material/Email';
+import { useEffect } from "react";
 
 const RootLayout = () => {
   const getNavLinkClass = ({ isActive }) => {
@@ -28,10 +32,14 @@ const RootLayout = () => {
     return "nav-item-normal";
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} >
           <AppBar position="fixed" sx={{ bgcolor: "#fcf7ef" }}>
             <Toolbar
               component={Container}
@@ -68,8 +76,9 @@ const RootLayout = () => {
 
               <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
                 <NavLink className={getNavLinkClass} to={"introduction"}>
-                  Introduction
+                    Introduction
                 </NavLink>
+
                 <NavLink className={getNavLinkClass} to={"collections"}>
                   Collections
                 </NavLink>

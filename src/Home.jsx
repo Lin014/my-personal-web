@@ -1,7 +1,7 @@
 import indexImage from "./assets/images/index-image.png";
 import bio from "./assets/images/bio.png";
 import skill from "./assets/images/skill.png";
-import license from "./assets/images/license.png";
+import certifications from "./assets/images/license.png";
 import html from "./assets/images/html.png";
 import css from "./assets/images/css.png";
 import js from "./assets/images/javascript.png";
@@ -9,16 +9,33 @@ import bootstrap from "./assets/images/bootstrap.png";
 import react from "./assets/images/react.png";
 import java from "./assets/images/java.png";
 import python from "./assets/images/python.png";
+import lingeringDream from "./assets/images/lingering-dream.png";
+import hairUniverse from "./assets/images/hair-universe.png";
+import potApp from "./assets/images/pot-app.png";
 
 import { Container, Stack, Typography } from "@mui/material";
 import { theme } from "./custom/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import { NavLink } from "react-router-dom";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import Avatar from "@mui/material/Avatar";
 import { amber } from "@mui/material/colors";
+import { HashLink } from "react-router-hash-link";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -31,7 +48,7 @@ function App() {
               py: 10,
             }}
           >
-            <Stack spacing={2} direction="column">
+            <Stack spacing={2} direction="column" data-aos="fade-right">
               <Typography
                 variant="h3"
                 sx={{
@@ -67,17 +84,22 @@ function App() {
                 sx={{
                   fontFamily: "Playpen Sans",
                   pl: { xs: 3, sm: 5 },
-                  fontSize: { xs: "36px", sm: "64px", md: "90px" },
+                  fontSize: { xs: "36px", sm: "56px", md: "84px" },
                 }}
                 className="white-text-shadow"
               >
                 Amelia
               </Typography>
             </Stack>
-            <img src={indexImage} alt="Amelia Image" className="w-60" />
+            <img
+              src={indexImage}
+              alt="Amelia Image"
+              className="w-60"
+              data-aos="fade-left"
+            />
           </Container>
 
-          <Box sx={{ py: 10 }} bgcolor="primary.main">
+          <Box sx={{ py: 10 }} bgcolor="primary.main" data-aos="fade-up">
             <Container>
               <Typography
                 variant="h3"
@@ -85,6 +107,7 @@ function App() {
                   fontFamily: "Playpen Sans",
                   mb: 4,
                   fontSize: { xs: "32px", sm: "48px" },
+                  textAlign: "center",
                 }}
                 color="white"
               >
@@ -108,17 +131,28 @@ function App() {
               sx={{
                 fontFamily: "Playpen Sans",
                 mb: 4,
-                textAlign: "right",
+                textAlign: "center",
                 fontSize: { xs: "32px", sm: "48px" },
               }}
+              data-aos="fade-up"
             >
-              About me
+              About Me
             </Typography>
             <Stack sx={{ flexDirection: { md: "column", lg: "row" } }}>
-              <ul className="w-50 w-md-100 home-about-me-ul">
+              <ul
+                className="w-50 w-md-100 home-about-me-ul"
+                data-aos="fade-right"
+              >
                 <li>
-                  <NavLink to={"introduction"} className="home-about-me-link">
-                    <Stack direction="column" spacing={2} sx={{ alignItems: "center" }}>
+                  <HashLink
+                    to="introduction#aboutme"
+                    className="home-about-me-link"
+                  >
+                    <Stack
+                      direction="column"
+                      spacing={2}
+                      sx={{ alignItems: "center" }}
+                    >
                       <Avatar
                         alt="biography"
                         src={bio}
@@ -135,11 +169,18 @@ function App() {
                         自傳
                       </Typography>
                     </Stack>
-                  </NavLink>
+                  </HashLink>
                 </li>
                 <li>
-                  <NavLink to={"introduction"} className="home-about-me-link">
-                    <Stack direction="column" spacing={2} sx={{ alignItems: "center" }}>
+                  <HashLink
+                    to="introduction#skills"
+                    className="home-about-me-link"
+                  >
+                    <Stack
+                      direction="column"
+                      spacing={2}
+                      sx={{ alignItems: "center" }}
+                    >
                       <Avatar
                         alt="skill"
                         src={skill}
@@ -156,14 +197,21 @@ function App() {
                         專長
                       </Typography>
                     </Stack>
-                  </NavLink>
+                  </HashLink>
                 </li>
                 <li>
-                  <NavLink to={"introduction"} className="home-about-me-link">
-                    <Stack direction="column" spacing={2} sx={{ alignItems: "center" }}>
+                  <HashLink
+                    to="introduction#certifications"
+                    className="home-about-me-link"
+                  >
+                    <Stack
+                      direction="column"
+                      spacing={2}
+                      sx={{ alignItems: "center" }}
+                    >
                       <Avatar
-                        alt="license"
-                        src={license}
+                        alt="certifications"
+                        src={certifications}
                         sx={{ width: 120, height: 120 }}
                       />
                       <Typography
@@ -177,7 +225,7 @@ function App() {
                         證照
                       </Typography>
                     </Stack>
-                  </NavLink>
+                  </HashLink>
                 </li>
               </ul>
               <Typography
@@ -185,6 +233,7 @@ function App() {
                 color="textDark"
                 sx={{ lineHeight: "2", fontSize: { xs: "16px", sm: "24px" } }}
                 className="w-50 w-md-100"
+                data-aos="fade-left"
               >
                 接觸網頁前端程式有兩年的經驗，熟悉 HTML、CSS、JavaScript，
                 還學習了 Bootstrap CSS 框架與前端框架 React，
@@ -201,7 +250,9 @@ function App() {
                 fontFamily: "Playpen Sans",
                 mb: 4,
                 fontSize: { xs: "32px", sm: "48px" },
+                textAlign: "center",
               }}
+              data-aos="fade-up"
             >
               Skills
             </Typography>
@@ -214,7 +265,7 @@ function App() {
                 flexWrap: "wrap",
                 mb: 8,
               }}
-              spacing={8}
+              spacing={8}              
             >
               <Stack
                 direction="column"
@@ -222,6 +273,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="HTML"
@@ -254,6 +306,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="CSS"
@@ -286,6 +339,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Javascript"
@@ -318,6 +372,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Bootstrap"
@@ -355,6 +410,7 @@ function App() {
                 mb: 8,
               }}
               spacing={8}
+              data-aos="fade-up"
             >
               <Stack
                 direction="column"
@@ -362,6 +418,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="React"
@@ -394,6 +451,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Java"
@@ -426,6 +484,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Python"
@@ -454,7 +513,229 @@ function App() {
               </Stack>
             </Stack>
 
+            <Typography
+              variant="h3"
+              sx={{
+                fontFamily: "Playpen Sans",
+                mb: 5,
+                fontSize: { xs: "32px", sm: "48px" },
+                textAlign: "center",
+              }}
+              data-aos="fade-up"
+            >
+              Collections
+            </Typography>
 
+            <Stack
+              flexWrap="wrap"
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                justifyContent: { xs: "center", sm: "space-between" },
+                alignItems: { xs: "center", sm: "stretch" },
+              }}
+              data-aos="fade-up"
+            >
+              <Card
+                sx={{
+                  maxWidth: 345,
+                  mb: 5,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box>
+                  <CardMedia
+                    sx={{ height: 250 }}
+                    image={lingeringDream}
+                    title="Lingering Dream"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ fontWeight: "bold" }}
+                      color="textDark"
+                    >
+                      Lingering Dream - 繾綣夢
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      義式餐廳網站，兩人協作的作品，前端靜態網站。
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      使用技術：HTML / CSS / JavaScript
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      負責頁面：header、footer、首頁、關於我們、最新消息、美食饗宴、聯絡我們
+                    </Typography>
+                  </CardContent>
+                </Box>
+
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Button
+                    size="small"
+                    component={Link}
+                    href="https://github.com/Lin014/lingering-dream"
+                    target="_blank"
+                  >
+                    GitHub Repo
+                  </Button>
+                  <Button
+                    size="small"
+                    component={Link}
+                    href="https://lingering-dream.vercel.app/index.html"
+                    variant="contained"
+                    color="primary"
+                    sx={{ color: "white" }}
+                    target="_blank"
+                  >
+                    前往查看
+                  </Button>
+                </CardActions>
+              </Card>
+
+              <Card
+                sx={{
+                  maxWidth: 345,
+                  mb: 5,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box>
+                  <CardMedia
+                    sx={{ height: 250 }}
+                    image={hairUniverse}
+                    title="頭髮危機小百科"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ fontWeight: "bold" }}
+                      color="textDark"
+                    >
+                      頭髮危機小百科
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      六角學院直播切版班三人合作專題，以介紹頭髮知識為題，包含頭髮結構、頭髮常見問題、如何保養頭髮、挑選洗髮精、查找附近診所等等內容。
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      使用技術：HTML / CSS / JavaScript / Bootstrap / jQuery
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      負責頁面：header、首頁、頭皮種類、頭髮結構、頭髮解惑指南、頭皮起膿包、紅疹、頭髮養護、洗髮精介紹、頭皮清潔、洗髮精推薦
+                    </Typography>
+                  </CardContent>
+                </Box>
+
+                <CardActions
+                  sx={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Button
+                    size="small"
+                    component={Link}
+                    href="https://github.com/Lin014/hair-universe-web"
+                    target="_blank"
+                  >
+                    GitHub Repo
+                  </Button>
+                  <Button
+                    size="small"
+                    component={Link}
+                    href="https://lin014.github.io/hair-universe-web/index.html"
+                    variant="contained"
+                    color="primary"
+                    sx={{ color: "white" }}
+                    target="_blank"
+                  >
+                    前往查看
+                  </Button>
+                </CardActions>
+              </Card>
+
+              <Card
+                sx={{
+                  maxWidth: 345,
+                  mb: 5,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box>
+                  <CardMedia
+                    sx={{
+                      height: 250,
+                      objectPosition: "center top",
+                      objectFit: "none",
+                    }}
+                    image={potApp}
+                    title="Pot App"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ fontWeight: "bold" }}
+                      color="textDark"
+                    >
+                      Auto Potted Plant APP
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      物件導向軟體工程 (OO)
+                      課程專案作品，自動澆水盆栽系統，利用魚菜共生的概念，頂部是植物，底下是水族箱，功能包含能自動偵測土壤濕度，適度給予澆水；偵測環境的亮度，當亮度不足時，自動打開燈光給予照明，
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      使用技術：Android Studio / Design Pattern
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      負責部分：APP 整體架構撰寫、整合、Design Pattern 撰寫
+                    </Typography>
+                  </CardContent>
+                </Box>
+
+                <CardActions sx={{ display: "flex", justifyContent: "start" }}>
+                  <Button
+                    size="small"
+                    component={Link}
+                    href="https://github.com/Lin014/auto-pot-app"
+                    target="_blank"
+                  >
+                    GitHub Repo
+                  </Button>
+                  <Button
+                    size="small"
+                    comonent={Link}
+                    href="https://drive.google.com/drive/folders/1-AqgGvTjj-YGohvK356uLWhe63pi0n0p?usp=share_link"
+                    target="_blank"
+                  >
+                    PPT
+                  </Button>
+                </CardActions>
+              </Card>
+            </Stack>
+
+            <Stack
+              direction="row"
+              sx={{ justifyContent: "end" }}
+              data-aos="fade-up"
+            >
+              <Button
+                variant="outlined"
+                sx={{ ml: "auto" }}
+                onClick={() => navigate("collections")}
+              >
+                查看更多
+              </Button>
+            </Stack>
           </Container>
         </Box>
       </ThemeProvider>

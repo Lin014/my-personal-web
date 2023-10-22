@@ -5,13 +5,19 @@ import { ThemeProvider } from "@mui/material/styles";
 import myImage from "../assets/images/index-image2.png";
 import { amber } from "@mui/material/colors";
 import Avatar from "@mui/material/Avatar";
+import { useEffect } from "react";
 
 function Introduction() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box sx={{ bgcolor: "#fcf7ef" }}>
-          <Container sx={{ py: 8 }}>
+        <Box id="aboutme" sx={{ bgcolor: "#fcf7ef" }}>  
+          <Container sx={{ pt: 8 }}>
             <Typography
               variant="h1"
               sx={{
@@ -21,6 +27,7 @@ function Introduction() {
                 color: "#392e28",
                 mb: 5,
               }}
+              data-aos="fade-up"
             >
               About Me
             </Typography>
@@ -29,8 +36,9 @@ function Introduction() {
               <Avatar
                 src={myImage}
                 sx={{ width: "35%", height: "35%" }}
-              ></Avatar>
-              <Stack direction="column" sx={{ alignItems: "start" }}>
+                data-aos="fade-right"
+              />
+              <Stack direction="column" sx={{ alignItems: "start" }} data-aos="fade-left">
                 <Typography variant="body1" sx={{ mb: 1 }} color="textDark">
                   我來自美食之都臺南，目前就讀國立雲林科技大學資訊管理系四年級，曾參與六角學院網頁切版直播班，並且曾擔任宿舍網路管理小組副組長。
                 </Typography>
@@ -101,7 +109,9 @@ function Introduction() {
             </Stack>
           </Container>
 
-          <Container sx={{ pb: 8 }}>
+          <Box id="skills" sx={{ pb: 8 }} />
+
+          <Container>
             <Typography
               variant="h2"
               sx={{
@@ -112,6 +122,7 @@ function Introduction() {
                 mb: 5,
                 fontWeight: "bold",
               }}
+              data-aos="fade-up"
             >
               Skills
             </Typography>
@@ -125,11 +136,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               前端 Frontend
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>熟悉 HTML、CSS、JavaScript</li>
               <li>
                 Bootstrap CSS 框架、RWD，可獨立切版
@@ -147,11 +159,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               其他 Others
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>Git 協作</li>
               <li>Java 物件導向</li>
               <li>開發過 Android Studio APP</li>
@@ -159,6 +172,8 @@ function Introduction() {
               <li>寫過 MERN Stack - CRUD</li>
             </ul>
           </Container>
+
+          <Box id="certifications" sx={{ pb: 8 }} />
 
           <Container sx={{ pb: 8 }}>
             <Typography
@@ -171,6 +186,7 @@ function Introduction() {
                 mb: 5,
                 fontWeight: "bold",
               }}
+              data-aos="fade-up"
             >
               Certifications
             </Typography>
@@ -188,7 +204,7 @@ function Introduction() {
               Microsoft
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>AI-900 AI 人工智慧基礎認證</li>
             </ul>
 
@@ -201,11 +217,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               平面／網頁／多媒體相關證照
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>丙級網頁設計技術士</li>
             </ul>
 
@@ -218,11 +235,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               TQC／EEC
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>TQC-OA -Excel</li>
               <li>TQC-OA -Word</li>
               <li>TQC-OA -中文輸入</li>
@@ -237,11 +255,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               職訓局
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>乙級電腦軟體應用技術士</li>
               <li>丙級電腦軟體應用技術士</li>
             </ul>
@@ -255,11 +274,12 @@ function Introduction() {
               }}
               color="textDark"
               display="inline-block"
+              data-aos="fade-up"
             >
               財務會計相關證照
             </Typography>
 
-            <ul className="introduction-ul">
+            <ul className="introduction-ul" data-aos="fade-up">
               <li>丙級會計事務技術士</li>
               <li>會計能力測驗三級合格證書</li>
             </ul>
