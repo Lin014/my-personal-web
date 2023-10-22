@@ -68,7 +68,7 @@ function App() {
                 }}
                 className="white-text-shadow"
               >
-                I’m a front-end
+                I’m a Software
               </Typography>
               <Typography
                 variant="h3"
@@ -78,7 +78,7 @@ function App() {
                 }}
                 className="white-text-shadow"
               >
-                developer
+                Engineer
               </Typography>
               <Typography
                 variant="h1"
@@ -240,8 +240,8 @@ function App() {
               >
                 接觸網頁前端程式有兩年的經驗，熟悉 HTML、CSS、JavaScript，
                 還學習了 Bootstrap CSS 框架與前端框架 React，
-                在開發過程中，注重使用者的感受、視覺美觀設計、團隊溝通，
-                希望能打造出讓顧客滿意的網頁。
+                除了前端網頁之外，還開發過 NodeJS、SpringBoot、Django 等等後端系統。
+                希望能在未來工作中持續精進程式能力。
               </Typography>
             </Stack>
           </Container>
