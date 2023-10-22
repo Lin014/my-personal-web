@@ -47,6 +47,7 @@ function App() {
               justifyContent: "space-between",
               py: 10,
             }}
+            data-aos="fade-up"
           >
             <Stack spacing={2} direction="column" >
               <Typography
@@ -110,6 +111,7 @@ function App() {
                   textAlign: "center",
                 }}
                 color="white"
+                data-aos="fade-up"
               >
                 Introduction
               </Typography>
@@ -117,6 +119,7 @@ function App() {
                 variant="h5"
                 color="white"
                 sx={{ lineHeight: "2", fontSize: { xs: "16px", sm: "24px" } }}
+                data-aos="fade-up"
               >
                 Hello, I am Amelia.
                 我來自美食之都台南，自臺南高商畢業，現就讀於國立雲林科技大學—資訊管理系四年級。
@@ -134,7 +137,7 @@ function App() {
                 textAlign: "center",
                 fontSize: { xs: "32px", sm: "48px" },
               }}
-              
+              data-aos="fade-up"
             >
               About Me
             </Typography>
@@ -143,7 +146,7 @@ function App() {
                 className="w-50 w-md-100 home-about-me-ul"
                 
               >
-                <li>
+                <li data-aos="fade-up">
                   <HashLink
                     to="introduction#aboutme"
                     className="home-about-me-link"
@@ -171,7 +174,7 @@ function App() {
                     </Stack>
                   </HashLink>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   <HashLink
                     to="introduction#skills"
                     className="home-about-me-link"
@@ -199,7 +202,7 @@ function App() {
                     </Stack>
                   </HashLink>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                   <HashLink
                     to="introduction#certifications"
                     className="home-about-me-link"
@@ -233,7 +236,7 @@ function App() {
                 color="textDark"
                 sx={{ lineHeight: "2", fontSize: { xs: "16px", sm: "24px" } }}
                 className="w-50 w-md-100"
-                
+                data-aos="fade-up"
               >
                 接觸網頁前端程式有兩年的經驗，熟悉 HTML、CSS、JavaScript，
                 還學習了 Bootstrap CSS 框架與前端框架 React，
@@ -252,7 +255,7 @@ function App() {
                 fontSize: { xs: "32px", sm: "48px" },
                 textAlign: "center",
               }}
-              
+              data-aos="fade-up"
             >
               Skills
             </Typography>
@@ -273,7 +276,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="HTML"
@@ -306,7 +309,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="CSS"
@@ -339,7 +342,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Javascript"
@@ -372,7 +375,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Bootstrap"
@@ -410,7 +413,6 @@ function App() {
                 mb: 8,
               }}
               spacing={8}
-              
             >
               <Stack
                 direction="column"
@@ -418,7 +420,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="React"
@@ -451,7 +453,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Java"
@@ -484,7 +486,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                
+                data-aos="fade-up"
               >
                 <Avatar
                   alt="Python"
@@ -521,7 +523,7 @@ function App() {
                 fontSize: { xs: "32px", sm: "48px" },
                 textAlign: "center",
               }}
-              
+              data-aos="fade-up"
             >
               Collections
             </Typography>
@@ -544,6 +546,7 @@ function App() {
                   flexDirection: "column",
                   justifyContent: "space-between",
                 }}
+                data-aos="fade-up"
               >
                 <Box>
                   <CardMedia
@@ -606,6 +609,7 @@ function App() {
                   flexDirection: "column",
                   justifyContent: "space-between",
                 }}
+                data-aos="fade-up"
               >
                 <Box>
                   <CardMedia
@@ -668,6 +672,7 @@ function App() {
                   flexDirection: "column",
                   justifyContent: "space-between",
                 }}
+                data-aos="fade-up"
               >
                 <Box>
                   <CardMedia
@@ -726,7 +731,7 @@ function App() {
             <Stack
               direction="row"
               sx={{ justifyContent: "end" }}
-              
+              data-aos="fade-up"
             >
               <Button
                 variant="outlined"

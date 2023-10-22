@@ -36,9 +36,9 @@ function Introduction() {
               <Avatar
                 src={myImage}
                 sx={{ width: { xs: "80%", sm: "35%" }, height: { xs: "80%", sm: "35%" }, mb: { xs: 5, sm: 0 } }}
-                data-aos="fade-right"
+                data-aos="fade-up"
               />
-              <Stack direction="column" sx={{ alignItems: "start" }} data-aos="fade-left">
+              <Stack direction="column" sx={{ alignItems: "start" }} data-aos="fade-up">
                 <Typography variant="body1" sx={{ mb: 1 }} color="textDark">
                   我來自美食之都臺南，目前就讀國立雲林科技大學資訊管理系四年級，曾參與六角學院網頁切版直播班，並且曾擔任宿舍網路管理小組副組長。
                 </Typography>
