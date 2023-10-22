@@ -240,7 +240,7 @@ function App() {
               >
                 接觸網頁前端程式有兩年的經驗，熟悉 HTML、CSS、JavaScript，
                 還學習了 Bootstrap CSS 框架與前端框架 React，
-                除了前端網頁之外，還開發過 NodeJS、SpringBoot、Django 等等後端系統。
+                除了前端網頁之外，還開發過 Node.js、Spring Boot、Django 等等後端系統。
                 希望能在未來工作中持續精進程式能力。
               </Typography>
             </Stack>
