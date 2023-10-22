@@ -48,7 +48,7 @@ function App() {
               py: 10,
             }}
           >
-            <Stack spacing={2} direction="column" data-aos="fade-right">
+            <Stack spacing={2} direction="column" >
               <Typography
                 variant="h3"
                 sx={{
@@ -95,11 +95,11 @@ function App() {
               src={indexImage}
               alt="Amelia Image"
               className="w-60"
-              data-aos="fade-left"
+              
             />
           </Container>
 
-          <Box sx={{ py: 10 }} bgcolor="primary.main" data-aos="fade-up">
+          <Box sx={{ py: 10 }} bgcolor="primary.main" >
             <Container>
               <Typography
                 variant="h3"
@@ -134,14 +134,14 @@ function App() {
                 textAlign: "center",
                 fontSize: { xs: "32px", sm: "48px" },
               }}
-              data-aos="fade-up"
+              
             >
               About Me
             </Typography>
             <Stack sx={{ flexDirection: { md: "column", lg: "row" } }}>
               <ul
                 className="w-50 w-md-100 home-about-me-ul"
-                data-aos="fade-right"
+                
               >
                 <li>
                   <HashLink
@@ -233,7 +233,7 @@ function App() {
                 color="textDark"
                 sx={{ lineHeight: "2", fontSize: { xs: "16px", sm: "24px" } }}
                 className="w-50 w-md-100"
-                data-aos="fade-left"
+                
               >
                 接觸網頁前端程式有兩年的經驗，熟悉 HTML、CSS、JavaScript，
                 還學習了 Bootstrap CSS 框架與前端框架 React，
@@ -252,7 +252,7 @@ function App() {
                 fontSize: { xs: "32px", sm: "48px" },
                 textAlign: "center",
               }}
-              data-aos="fade-up"
+              
             >
               Skills
             </Typography>
@@ -273,7 +273,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="HTML"
@@ -306,7 +306,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="CSS"
@@ -339,7 +339,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="Javascript"
@@ -372,7 +372,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="Bootstrap"
@@ -410,7 +410,7 @@ function App() {
                 mb: 8,
               }}
               spacing={8}
-              data-aos="fade-up"
+              
             >
               <Stack
                 direction="column"
@@ -418,7 +418,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="React"
@@ -451,7 +451,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="Java"
@@ -484,7 +484,7 @@ function App() {
                   justifyContent: "center",
                   alignItems: "center",
                 }}
-                data-aos="fade-up"
+                
               >
                 <Avatar
                   alt="Python"
@@ -521,7 +521,7 @@ function App() {
                 fontSize: { xs: "32px", sm: "48px" },
                 textAlign: "center",
               }}
-              data-aos="fade-up"
+              
             >
               Collections
             </Typography>
@@ -534,7 +534,7 @@ function App() {
                 justifyContent: { xs: "center", sm: "space-between" },
                 alignItems: { xs: "center", sm: "stretch" },
               }}
-              data-aos="fade-up"
+              
             >
               <Card
                 sx={{
@@ -726,7 +726,7 @@ function App() {
             <Stack
               direction="row"
               sx={{ justifyContent: "end" }}
-              data-aos="fade-up"
+              
             >
               <Button
                 variant="outlined"
