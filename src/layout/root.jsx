@@ -13,16 +13,27 @@ import Stack from "@mui/material/Stack";
 import { Container } from "@mui/material";
 import { amber } from "@mui/material/colors";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Link from "@mui/material/Link";
 
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import PersonIcon from '@mui/icons-material/Person';
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import EmailIcon from '@mui/icons-material/Email';
-import { useEffect } from "react";
+import EmailIcon from "@mui/icons-material/Email";
+import MenuIcon from '@mui/icons-material/Menu';
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
+import { Fragment, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RootLayout = () => {
   const getNavLinkClass = ({ isActive }) => {
@@ -32,6 +43,54 @@ const RootLayout = () => {
     return "nav-item-normal";
   };
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [navState, setNavState] = useState(false);
+  const navigate = useNavigate()
+
+  window.addEventListener('resize', () => {
+    setIsMobile(window.innerWidth <= 768);
+  });
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setNavState(open);
+  };
+
+  const list = () => (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('introduction')}>
+              <ListItemIcon sx={{ minWidth: 40 }}>
+                <PersonIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Introduction" sx={{ color: "textDark" }} />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => navigate('collections')}>
+              <ListItemIcon sx={{ minWidth: 40 }}>
+                <CollectionsBookmarkIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Collections" sx={{ color: "textDark" }} />
+            </ListItemButton>
+          </ListItem>
+      </List>
+    </Box>
+  );
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -39,7 +98,7 @@ const RootLayout = () => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Box sx={{ flexGrow: 1 }} >
+        <Box sx={{ flexGrow: 1 }}>
           <AppBar position="fixed" sx={{ bgcolor: "#fcf7ef" }}>
             <Toolbar
               component={Container}
@@ -74,15 +133,32 @@ const RootLayout = () => {
                 </Typography>
               </Stack>
 
-              <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
-                <NavLink className={getNavLinkClass} to={"introduction"}>
+              {isMobile ? (
+                <Fragment>
+                  <Button onClick={toggleDrawer(true)}><MenuIcon /></Button>
+                  <Drawer
+                    anchor="right"
+                    open={navState}
+                    onClose={toggleDrawer(false)}
+                  >
+                    {list()}
+                  </Drawer>
+                </Fragment>
+              ) : (
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  sx={{ alignItems: "center" }}
+                >
+                  <NavLink className={getNavLinkClass} to={"introduction"}>
                     Introduction
-                </NavLink>
+                  </NavLink>
 
-                <NavLink className={getNavLinkClass} to={"collections"}>
-                  Collections
-                </NavLink>
-              </Stack>
+                  <NavLink className={getNavLinkClass} to={"collections"}>
+                    Collections
+                  </NavLink>
+                </Stack>
+              )}
             </Toolbar>
           </AppBar>
         </Box>
@@ -95,7 +171,11 @@ const RootLayout = () => {
           <Container sx={{ pt: 5, pb: 2 }}>
             <Stack
               direction="row"
-              sx={{ justifyContent: "space-between", alignItems: "center", mb: 3 }}
+              sx={{
+                justifyContent: "space-between",
+                alignItems: "center",
+                mb: 3,
+              }}
             >
               <Typography
                 variant="h5"
@@ -132,7 +212,10 @@ const RootLayout = () => {
             </Stack>
 
             <Stack direction={{ xs: "column", sm: "row" }} sx={{ mb: 2 }}>
-              <Stack direction="row" sx={{ alignItems: "center", mb: { xs: 2, sm: 0}, mr: 3 }}>
+              <Stack
+                direction="row"
+                sx={{ alignItems: "center", mb: { xs: 2, sm: 0 }, mr: 3 }}
+              >
                 <LocalPhoneIcon sx={{ color: "white", mr: 1 }} />
                 <Link
                   href="tel:+4733378901"

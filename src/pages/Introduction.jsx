@@ -32,10 +32,10 @@ function Introduction() {
               About Me
             </Typography>
 
-            <Stack direction="row" sx={{ alignItems: "start" }}>
+            <Stack direction={{ xs: "column", sm: "row" }} sx={{ alignItems: { xs: "center", sm: "start" } }}>
               <Avatar
                 src={myImage}
-                sx={{ width: "35%", height: "35%" }}
+                sx={{ width: { xs: "80%", sm: "35%" }, height: { xs: "80%", sm: "35%" }, mb: { xs: 5, sm: 0 } }}
                 data-aos="fade-right"
               />
               <Stack direction="column" sx={{ alignItems: "start" }} data-aos="fade-left">
