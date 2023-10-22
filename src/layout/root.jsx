@@ -64,12 +64,12 @@ const RootLayout = () => {
 
   const list = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: 250, bgcolor: "#fcf7ef", height: "100%" }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <List>
+      <List >
           <ListItem disablePadding>
             <ListItemButton onClick={() => navigate('introduction')}>
               <ListItemIcon sx={{ minWidth: 40 }}>
@@ -139,7 +139,7 @@ const RootLayout = () => {
                   <Drawer
                     anchor="right"
                     open={navState}
-                    onClose={toggleDrawer(false)}
+                    onClose={toggleDrawer(false)}                    
                   >
                     {list()}
                   </Drawer>
